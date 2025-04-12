@@ -1,103 +1,200 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight, CheckCircle2, Clock, Code2, Users } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col items-center">
+      <section className="container flex flex-col items-center justify-center gap-6 py-12 text-center md:py-20">
+        <div className="space-y-4">
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            Automate Your Development Roadmaps
+          </h1>
+          <p className="text-muted-foreground mx-auto max-w-[700px] text-lg md:text-xl">
+            Stop spending hours on manual planning. AutoManager generates
+            optimized project timelines in minutes.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="flex flex-col gap-4 sm:flex-row">
+          <Button size="lg" asChild>
+            <Link href="/sign-in">
+              Try AutoManager <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
+        <div className="bg-background relative mx-auto aspect-video w-full max-w-5xl overflow-hidden rounded-lg border shadow-xl">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/dashboard.png?height=720&width=1280"
+            alt="AutoManager Dashboard Preview"
+            width={1280}
+            height={720}
+            className="object-cover"
+            priority
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="from-background absolute inset-0 bg-gradient-to-t to-transparent to-80%"></div>
+        </div>
+      </section>
+
+      <section className="container py-12 md:py-20">
+        <div className="mx-auto mb-12 max-w-[800px] text-center">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Simplify Complex Project Planning
+          </h2>
+          <p className="text-muted-foreground mt-4 text-lg">
+            AutoManager transforms your inputs into clear, actionable roadmaps
+            that optimize your team&apos;s time and resources.
+          </p>
+        </div>
+        <div className="grid gap-6 p-6 sm:grid-cols-2 lg:grid-cols-3">
+          <Card>
+            <CardHeader>
+              <Clock className="text-primary h-10 w-10" />
+              <CardTitle className="mt-4">Save Planning Time</CardTitle>
+              <CardDescription>
+                Reduce roadmap creation from hours to minutes with automated
+                scheduling.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Automatic dependency resolution</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Resource allocation optimization</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Instant timeline recalculation</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <Code2 className="text-primary h-10 w-10" />
+              <CardTitle className="mt-4">Optimize Development</CardTitle>
+              <CardDescription>
+                Visualize bottlenecks and optimize your development workflow.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Critical path identification</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Bottleneck visualization</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Resource utilization insights</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardHeader>
+              <Users className="text-primary h-10 w-10" />
+              <CardTitle className="mt-4">Team Alignment</CardTitle>
+              <CardDescription>
+                Keep everyone on the same page with clear visual roadmaps.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Shareable Gantt charts</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Team workload visualization</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle2 className="text-primary mr-2 h-5 w-5" />
+                  <span>Progress tracking</span>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section className="bg-muted w-full px-4 py-12 md:px-8 md:py-20">
+        <div className="container">
+          <div className="mx-auto mb-12 max-w-[800px] text-center">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              How It Works
+            </h2>
+            <p className="text-muted-foreground mt-4 text-lg">
+              Four simple steps to transform your project planning process
+            </p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="relative flex flex-col items-center text-center">
+              <div className="bg-primary text-primary-foreground flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold">
+                1
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Input Tasks</h3>
+              <p className="text-muted-foreground mt-2">
+                Enter your project tasks and their descriptions
+              </p>
+            </div>
+            <div className="relative flex flex-col items-center text-center">
+              <div className="bg-primary text-primary-foreground flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold">
+                2
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Set Estimates</h3>
+              <p className="text-muted-foreground mt-2">
+                Add time estimates and define dependencies between tasks
+              </p>
+            </div>
+            <div className="relative flex flex-col items-center text-center">
+              <div className="bg-primary text-primary-foreground flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold">
+                3
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Specify Resources</h3>
+              <p className="text-muted-foreground mt-2">
+                Enter the number of developers and their availability
+              </p>
+            </div>
+            <div className="relative flex flex-col items-center text-center">
+              <div className="bg-primary text-primary-foreground flex h-12 w-12 items-center justify-center rounded-full text-lg font-bold">
+                4
+              </div>
+              <h3 className="mt-4 text-xl font-bold">Generate Roadmap</h3>
+              <p className="text-muted-foreground mt-2">
+                Get an optimized Gantt chart showing your project timeline
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container px-6 py-12 md:px-10 md:py-20">
+        <div className="bg-primary text-primary-foreground mx-auto max-w-[800px] rounded-lg p-8 text-center md:p-12">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Ready to Streamline Your Project Planning?
+          </h2>
+          <p className="text-primary-foreground/90 mx-auto mt-4 max-w-[600px] text-lg">
+            Join the teams that are saving hours every week with automated
+            roadmap generation.
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
