@@ -1,0 +1,11 @@
+# Ignore artifacts:
+build
+coverage
+
+# drizzle
+drizzle.config.ts
+drizzle
+
+# package-lock.json
+package-lock.json
+
