@@ -12,8 +12,8 @@ export default function RootLayout({
       <div className="flex h-screen w-full overflow-hidden">
         <AppSidebar />
         <main className="flex-1 overflow-auto">
-          <SidebarTrigger className="mr-2" />
-          <div className="container py-6">{children}</div>
+          <SidebarTrigger className="ml-2" />
+          <div className="container p-6">{children}</div>
         </main>
       </div>
     </SidebarProvider>

@@ -6,9 +6,9 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-export default function Home() {
+export default async function DashboardPage() {
   return (
-    <div className="space-y-6 p-6">
+    <div className="space-y-6">
       <div>
         <h2 className="text-3xl font-bold tracking-tight">
           Welcome to AutoManager
