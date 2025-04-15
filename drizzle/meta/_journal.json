@@ -15,6 +15,13 @@
       "when": 1744588271718,
       "tag": "0001_hard_captain_midlands",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1744681050781,
+      "tag": "0002_dashing_mojo",
+      "breakpoints": true
     }
   ]
 }

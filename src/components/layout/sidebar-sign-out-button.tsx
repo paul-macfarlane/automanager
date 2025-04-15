@@ -19,7 +19,7 @@ export function SidebarSignOutButton() {
   };
 
   return (
-    <SidebarMenuButton variant="outline" onClick={signOut}>
+    <SidebarMenuButton onClick={signOut}>
       <LogOut className="h-4 w-4" />
       <span>Sign Out</span>
     </SidebarMenuButton>

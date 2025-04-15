@@ -1,18 +1,10 @@
-import {
-  BarChart3,
-  Calendar,
-  Cog,
-  Home,
-  LayoutDashboard,
-  Users,
-} from "lucide-react";
+import { BarChart3, Cog, Home } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
   SidebarGroup,
   SidebarGroupContent,
-  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
@@ -22,6 +14,7 @@ import {
 } from "@/components/ui/sidebar";
 import { ModeToggle } from "@/components/mode-toggle";
 import { SidebarSignOutButton } from "@/components/layout/sidebar-sign-out-button";
+import Link from "next/link";
 
 export function AppSidebar() {
   return (
@@ -35,31 +28,20 @@ export function AppSidebar() {
       <SidebarSeparator />
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               <SidebarMenuItem>
-                <SidebarMenuButton tooltip="Dashboard">
-                  <Home className="h-4 w-4" />
-                  <span>Dashboard</span>
+                <SidebarMenuButton asChild tooltip="Dashboard">
+                  <Link href="/app">
+                    <Home className="h-4 w-4" />
+                    <span>Dashboard</span>
+                  </Link>
                 </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton tooltip="Projects">
-                  <LayoutDashboard className="h-4 w-4" />
-                  <span>Projects</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton tooltip="Schedule">
-                  <Calendar className="h-4 w-4" />
-                  <span>Schedule</span>
-                </SidebarMenuButton>
-              </SidebarMenuItem>
-              <SidebarMenuItem>
-                <SidebarMenuButton tooltip="Team">
-                  <Users className="h-4 w-4" />
-                  <span>Team</span>
+                <SidebarMenuButton asChild tooltip="Settings">
+                  <Link href="/app/settings">
+                    <Cog className="h-4 w-4" />
+                    <span>Settings</span>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             </SidebarMenu>
@@ -68,12 +50,6 @@ export function AppSidebar() {
       </SidebarContent>
       <SidebarFooter>
         <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton tooltip="Settings">
-              <Cog className="h-4 w-4" />
-              <span>Settings</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
           <SidebarMenuItem>
             <SidebarSignOutButton />
           </SidebarMenuItem>

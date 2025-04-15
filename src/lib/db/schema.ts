@@ -92,8 +92,6 @@ export const projectsTable = sqliteTable("projects", {
     .$defaultFn(() => crypto.randomUUID()),
   name: text("name").notNull(),
   description: text("description"),
-  // Store the number of available resources directly on the project for simplicity, in the future where
-  resourceCount: integer("resource_count").notNull().default(1),
   ...timestamps,
 });
 
