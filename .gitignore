@@ -43,3 +43,6 @@ next-env.d.ts
 
 # libsql
 local.db*
+
+# google oauth client secret file
+localGoogleSecret.json

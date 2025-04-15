@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -10,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { GoogleIcon } from "@/components/google-icon";
+import { GoogleSignInButton } from "@/components/features/google-sign-in-button";
 
 export const metadata: Metadata = {
   title: "Sign In | AutoManager",
@@ -28,14 +27,7 @@ export default function SignInPage() {
           </CardDescription>
         </CardHeader>
         <CardContent className="flex flex-col space-y-4 p-6">
-          <Button
-            variant="secondary"
-            size="lg"
-            className="h-12 w-full gap-2 text-base shadow-sm"
-          >
-            <GoogleIcon className="h-5 w-5" />
-            Sign in with Google
-          </Button>
+          <GoogleSignInButton />
         </CardContent>
         <CardFooter className="text-muted-foreground flex flex-col space-y-4 text-center text-sm">
           <p>

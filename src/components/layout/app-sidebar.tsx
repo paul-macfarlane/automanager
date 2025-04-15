@@ -21,6 +21,7 @@ import {
   SidebarSeparator,
 } from "@/components/ui/sidebar";
 import { ModeToggle } from "@/components/mode-toggle";
+import { SidebarSignOutButton } from "@/components/layout/sidebar-sign-out-button";
 
 export function AppSidebar() {
   return (
@@ -72,6 +73,9 @@ export function AppSidebar() {
               <Cog className="h-4 w-4" />
               <span>Settings</span>
             </SidebarMenuButton>
+          </SidebarMenuItem>
+          <SidebarMenuItem>
+            <SidebarSignOutButton />
           </SidebarMenuItem>
         </SidebarMenu>
         <div className="flex items-center justify-between p-2">
